@@ -68,7 +68,7 @@ header nav ul li a:hover {
     height: auto;
     margin-bottom: 0;
     border: none;
-    border-radius: 50%;
+    border-radius: 0;
     box-shadow: none;
 }
 
