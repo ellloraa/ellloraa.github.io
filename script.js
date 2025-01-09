@@ -1,1 +1,4 @@
-console.log("Welcome to Ellloraa's Portfolio!");
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("hidden");
+}
