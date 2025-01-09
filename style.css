@@ -22,9 +22,9 @@ header {
 }
 
 header h1 {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
-    color: #4CAF50;
+    color: #333;
     margin: 0;
 }
 
@@ -46,34 +46,40 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #4CAF50;
+    color: #333;
 }
 
 /* Hero Section */
 #hero {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
     padding: 4rem 2rem;
     background-color: #f0f8ff;
 }
 
-.hero-content {
-    max-width: 600px;
+.profile-container {
+    flex: 1;
+    text-align: center;
 }
 
 .profile-container img {
     width: 150px;
     height: auto;
-    margin-bottom: 1rem;
-    border: 3px solid #4CAF50;
+    margin-bottom: 0;
+    border: none;
     border-radius: 50%;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+}
+
+.hero-content {
+    flex: 2;
+    text-align: left;
+    padding-left: 2rem;
 }
 
 .hero-content h1 {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Roboto', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
     color: #333;
@@ -85,21 +91,21 @@ header nav ul li a:hover {
     margin-bottom: 1.5rem;
 }
 
-.hero-content .buttons .button {
+.buttons .button {
     display: inline-block;
     margin: 0.5rem;
     padding: 0.7rem 1.5rem;
     font-size: 1rem;
     text-decoration: none;
     color: white;
-    background-color: #4CAF50;
+    background-color: #6c757d;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.hero-content .buttons .button:hover {
-    background-color: #388e3c;
+.buttons .button:hover {
+    background-color: #343a40;
     transform: translateY(-2px);
 }
 
@@ -110,10 +116,10 @@ header nav ul li a:hover {
 }
 
 #projects h2 {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Roboto', sans-serif;
     font-size: 2rem;
     text-align: center;
-    color: #4CAF50;
+    color: #333;
     margin-bottom: 1.5rem;
 }
 
@@ -166,9 +172,9 @@ header nav ul li a:hover {
 }
 
 .project-title h1 {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Roboto', sans-serif;
     font-size: 2rem;
-    color: #4CAF50;
+    color: #333;
 }
 
 .project-details {
@@ -198,7 +204,7 @@ header nav ul li a:hover {
 
 .project-features h2 {
     text-align: center;
-    color: #4CAF50;
+    color: #333;
     margin-bottom: 1rem;
 }
 
@@ -238,7 +244,7 @@ header nav ul li a:hover {
 
 .project-sponsors h2 {
     text-align: center;
-    color: #4CAF50;
+    color: #333;
     margin-bottom: 1rem;
 }
 

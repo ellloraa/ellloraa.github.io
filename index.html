@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ellora Devulapally Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
         /* General Styling */
@@ -32,9 +31,9 @@
         }
 
         header h1 a {
-            font-family: 'Press Start 2P', cursive;
+            font-family: 'Roboto', sans-serif;
             font-size: 1.5rem;
-            color: #4CAF50;
+            color: #333;
             text-decoration: none;
         }
 
@@ -56,31 +55,41 @@
         }
 
         header nav ul li a:hover {
-            color: #4CAF50;
+            color: #333;
         }
 
         /* Hero Section */
         #hero {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
-            text-align: center;
             padding: 4rem 2rem;
             background-color: #f0f8ff;
+        }
+
+        .profile-container {
+            flex: 1;
+            text-align: center;
         }
 
         .profile-container img {
             width: 150px;
             height: auto;
-            margin-bottom: 1rem;
-            border: 3px solid #4CAF50;
+            margin-bottom: 0;
+            border: none;
             border-radius: 50%;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: none;
+        }
+
+        .hero-content {
+            flex: 2;
+            text-align: left;
+            padding-left: 2rem;
         }
 
         .hero-content h1 {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 2rem;
+            font-family: 'Roboto', sans-serif;
+            font-size: 2.5rem;
             margin-bottom: 0.5rem;
             color: #333;
         }
@@ -98,14 +107,14 @@
             font-size: 1rem;
             text-decoration: none;
             color: white;
-            background-color: #4CAF50;
+            background-color: #6c757d;
             border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
         .buttons .button:hover {
-            background-color: #388e3c;
+            background-color: #343a40;
             transform: translateY(-2px);
         }
 
@@ -116,9 +125,10 @@
         }
 
         #projects h2 {
+            font-family: 'Roboto', sans-serif;
             font-size: 2rem;
             text-align: center;
-            color: #4CAF50;
+            color: #333;
             margin-bottom: 1.5rem;
         }
 
@@ -176,10 +186,10 @@
 
     <!-- Hero Section -->
     <section id="hero">
+        <div class="profile-container">
+            <img src="assets/images/profile.jpg" alt="Ellora Devulapally">
+        </div>
         <div class="hero-content">
-            <div class="profile-container">
-                <img src="assets/images/profile.jpg" alt="Ellora Devulapally">
-            </div>
             <h1>Ellora Devulapally</h1>
             <p class="bio">Creative Digital Artist | UX/UI Designer | Tech Enthusiast</p>
             <div class="buttons">
