@@ -1,18 +1,22 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    color: #333; /* Dark text for readability */
+    background-color: #fff; /* Clean white background */
+    line-height: 1.6;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background-color: #333;
-    color: white;
+    padding: 1rem 2rem;
+    background-color: #fff; /* White header */
+    border-bottom: 1px solid #e0e0e0; /* Subtle divider */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -24,24 +28,10 @@ header .profile {
 }
 
 header .profile img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     margin-right: 1rem;
-}
-
-header nav {
-    display: flex;
-    align-items: center;
-}
-
-header nav .menu-toggle {
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    display: none;
 }
 
 header nav ul {
@@ -51,17 +41,19 @@ header nav ul {
     padding: 0;
 }
 
-header nav ul.hidden {
-    display: none;
-}
-
 header nav ul li {
     margin: 0 1rem;
 }
 
 header nav ul li a {
-    color: white;
+    color: #4CAF50; /* Highlight color for links */
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #388E3C; /* Slightly darker highlight color */
 }
 
 /* Hero Section */
@@ -71,72 +63,72 @@ header nav ul li a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #f4f4f9; /* Light background */
-    color: #333; /* Dark text for contrast */
     text-align: center;
     padding: 2rem;
-    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    background-color: #fff; /* White background */
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
-    margin: 0;
-    color: #4CAF50; /* Add a sleek accent color */
+    margin-bottom: 1rem;
+    color: #333;
 }
 
 .hero-content .bio {
     font-size: 1.2rem;
+    max-width: 600px;
     margin: 1rem 0;
-    max-width: 600px; /* Limit text width for readability */
-    line-height: 1.5;
-    color: #555;
+    color: #666; /* Softer text for the bio */
 }
 
 .hero-content .links {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
 }
 
 .hero-content .links a {
     display: inline-block;
     margin: 0.5rem;
-    padding: 0.5rem 1.5rem;
+    padding: 0.7rem 1.5rem;
     font-size: 1rem;
     text-decoration: none;
     color: white;
-    background-color: #4CAF50; /* Match accent color */
+    background-color: #4CAF50; /* Highlight color */
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .hero-content .links a:hover {
-    background-color: #388E3C; /* Darken accent color on hover */
+    background-color: #388E3C; /* Darker green for hover */
     transform: translateY(-2px); /* Subtle hover effect */
 }
 
-
+/* Projects Section */
 #projects {
-    padding: 2rem;
-    background: #f4f4f9;
+    padding: 2rem 1rem;
+    background: #fff; /* White background */
     text-align: center;
 }
 
 #projects h2 {
-    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #4CAF50; /* Highlight color for headings */
+    margin-bottom: 1.5rem;
 }
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
 }
 
 .project {
-    background: white;
+    background: #fff;
     padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #e0e0e0; /* Light border for definition */
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project img {
@@ -147,34 +139,60 @@ header nav ul li a {
 
 .project a {
     text-decoration: none;
-    color: #4CAF50;
+    color: #4CAF50; /* Highlight color */
     font-weight: bold;
 }
-/* General Section Styling */
-.project-section {
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
+
+.project:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle hover shadow */
 }
 
-.project-section h1, .project-section h2 {
+/* Project Page Sections */
+.project-section {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.project-section h2 {
+    color: #4CAF50; /* Highlight color for section headings */
     text-align: center;
     margin-bottom: 1rem;
 }
 
-/* Project Gallery */
+.project-section p,
+.project-section ul {
+    text-align: center;
+    color: #666; /* Softer text for readability */
+}
+
+.project-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-section ul li {
+    margin: 0.5rem 0;
+}
+
+/* Gallery */
 .project-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin: 2rem 0;
-    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .project-gallery img {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-gallery img:hover {
+    transform: scale(1.05); /* Subtle zoom effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle hover shadow */
 }
