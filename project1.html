@@ -3,43 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atlas Course Advisor System - Ellora Devulapally</title>
+    <title>Atlas Course Advisor System</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header -->
     <header>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="#overview">Overview</a>
-            <a href="#features">Features</a>
-            <a href="#sponsors">Sponsors</a>
+            <a href="index.html" class="logo">Ellora Devulapally</a>
+            <div class="menu">
+                <a href="project1.html">Project 1</a>
+                <a href="project2.html">Project 2</a>
+                <!-- Add more projects here -->
+            </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="project-hero">
-        <h1>Atlas Course Advisor System</h1>
-        <p>A modern academic chatbot to enhance course advising at Duke University.</p>
-    </section>
-
     <!-- Main Content -->
-    <main>
-        <!-- Overview Section -->
-        <section id="overview" class="project-section">
-            <h2>Overview</h2>
-            <p>
-                The Atlas Course Advisor System is a 24/7 AI-powered chatbot designed to assist students 
-                with course selection, requirements, and resources. Built using advanced language models 
-                and semantic search, the system enhances academic advising at Duke University.
-            </p>
-            <p><strong>Type:</strong> Deployed Academic App</p>
-            <p><strong>Date:</strong> 2024</p>
-            <p><strong>Location:</strong> Durham, North Carolina</p>
+    <main class="project-page">
+        <!-- Title Section -->
+        <section class="project-title">
+            <h1>Atlas Course Advisor System</h1>
         </section>
 
-        <!-- Key Features Section -->
-        <section id="features" class="project-section">
+        <!-- Text and Image Layout -->
+        <section class="project-details">
+            <div class="project-text">
+                <p>
+                    The Atlas Course Advisor System is a 24/7 AI-powered chatbot designed to assist students with course selection, 
+                    requirements, and resources. Built using advanced language models and semantic search, the system enhances academic advising 
+                    at Duke University.
+                </p>
+                <ul>
+                    <li><strong>Type:</strong> Deployed Academic App</li>
+                    <li><strong>Date:</strong> 2024</li>
+                    <li><strong>Location:</strong> Durham, North Carolina</li>
+                </ul>
+            </div>
+            <div class="project-thumbnail">
+                <img src="assets/images/project1/image2.jpg" alt="Thumbnail for Atlas Course Advisor">
+            </div>
+        </section>
+
+        <!-- Features and Images -->
+        <section class="project-features">
             <h2>Key Features</h2>
             <ul>
                 <li><strong>AI Chatbot:</strong> A conversational assistant for advising questions.</li>
@@ -47,24 +54,16 @@
                 <li><strong>Quick View:</strong> In-chat course details and skill tags.</li>
                 <li><strong>Kubernetes Deployment:</strong> Hosted on OKD and Azure.</li>
             </ul>
-        </section>
-
-        <!-- Image Gallery -->
-        <section id="gallery" class="project-section">
-            <h2>Gallery</h2>
-            <div class="gallery">
+            <div class="project-images">
                 <img src="assets/images/project1/image1.jpg" alt="Atlas Chatbot Interface">
-                <img src="assets/images/project1/image2.jpg" alt="Skill Tag System">
                 <img src="assets/images/project1/image3.jpg" alt="Deployed Web App">
             </div>
         </section>
 
         <!-- Sponsors Section -->
-        <section id="sponsors" class="project-section">
+        <section class="project-sponsors">
             <h2>Sponsors</h2>
-            <p>
-                Sponsored by Duke University, NCShare, and the National Science Foundation.
-            </p>
+            <p>Sponsored by Duke University, NCShare, and the National Science Foundation.</p>
             <ul>
                 <li><strong>NSF Grant 2201525:</strong> NCShare Science DMZ</li>
                 <li><strong>NSF Grant 2201105:</strong> NCShare Compute as a Service</li>
