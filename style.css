@@ -21,28 +21,11 @@ header {
     z-index: 1000;
 }
 
-header .profile {
-    display: flex;
-    align-items: center;
-}
-
-header .profile img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 1rem;
-}
-
 header h1 {
     font-size: 1.5rem;
     font-weight: bold;
     color: #333;
     margin: 0;
-}
-
-header nav {
-    display: flex;
-    align-items: center;
 }
 
 header nav ul {
@@ -66,130 +49,89 @@ header nav ul li a:hover {
     color: #388E3C;
 }
 
-/* Main Page Hero */
-#hero {
+/* Profile Section */
+#profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     padding: 2rem 1rem;
-    background-color: #fff;
 }
 
-.hero-content h1 {
-    font-size: 2.5rem;
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.profile-content h1 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
     color: #4CAF50;
 }
 
-.hero-content .bio {
+.profile-content p {
     font-size: 1.2rem;
     color: #666;
-    margin: 1rem 0;
+    margin-bottom: 1.5rem;
 }
 
-.hero-content .links a {
+.profile-content .links a {
     display: inline-block;
     margin: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1.5rem;
     font-size: 1rem;
     text-decoration: none;
     color: white;
     background-color: #4CAF50;
     border-radius: 5px;
-    transition: background
-
-/* Project Page Layout */
-.project-page {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Title Section */
-.project-title h1 {
+.profile-content .links a:hover {
+    background-color: #388E3C;
+    transform: translateY(-2px);
+}
+
+/* Projects Section */
+#projects {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+#projects h2 {
     font-size: 2rem;
-    text-align: center;
     color: #4CAF50;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
-/* Text and Image Layout */
-.project-details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-bottom: 2rem;
-    align-items: center;
-}
-
-.project-text {
-    flex: 1 1 60%;
-}
-
-.project-text ul {
-    list-style: none;
-    padding: 0;
-}
-
-.project-text ul li {
-    margin-bottom: 0.5rem;
-}
-
-.project-thumbnail {
-    flex: 1 1 35%;
-}
-
-.project-thumbnail img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Features Section */
-.project-features {
-    margin-bottom: 2rem;
-}
-
-.project-features h2 {
-    color: #4CAF50;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.project-features ul {
-    list-style: disc;
-    margin-left: 2rem;
-}
-
-/* Images Section */
-.project-images {
-    display: flex;
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
-    justify-content: center;
-    margin-top: 2rem;
 }
 
-.project-images img {
-    width: 45%;
+.project img {
+    width: 100%;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-images img:hover {
+.project img:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Sponsors Section */
-.project-sponsors {
-    margin-top: 2rem;
+.project h3 {
+    margin: 0.5rem 0;
+    color: #333;
 }
 
-.project-sponsors h2 {
+.project a {
+    text-decoration: none;
     color: #4CAF50;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.project-sponsors ul {
-    list-style: disc;
-    margin-left: 2rem;
+    font-weight: bold;
 }
