@@ -40,58 +40,63 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #4CAF50;
+    color: #6c757d; /* Subtle blue-gray */
     text-decoration: none;
     font-weight: 500;
 }
 
 header nav ul li a:hover {
-    color: #388E3C;
+    color: #343a40; /* Darker gray */
 }
 
-/* Profile Section */
-#profile {
+/* Hero Section */
+#hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 4rem 2rem;
+    background-color: #f8f9fa; /* Light gray background */
 }
 
-.profile-image img {
-    width: 200px;
-    height: 200px;
+.hero-content {
+    max-width: 600px;
+}
+
+.profile-container img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.profile-content h1 {
-    font-size: 2rem;
-    margin: 0.5rem 0;
-    color: #4CAF50;
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #343a40;
 }
 
-.profile-content p {
+.hero-content .bio {
     font-size: 1.2rem;
-    color: #666;
+    color: #6c757d;
     margin-bottom: 1.5rem;
 }
 
-.profile-content .links a {
+.hero-content .buttons .button {
     display: inline-block;
     margin: 0.5rem;
     padding: 0.7rem 1.5rem;
     font-size: 1rem;
     text-decoration: none;
     color: white;
-    background-color: #4CAF50;
+    background-color: #6c757d;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.profile-content .links a:hover {
-    background-color: #388E3C;
+.hero-content .buttons .button:hover {
+    background-color: #343a40;
     transform: translateY(-2px);
 }
 
@@ -103,13 +108,13 @@ header nav ul li a:hover {
 
 #projects h2 {
     font-size: 2rem;
-    color: #4CAF50;
+    color: #343a40;
     margin-bottom: 1.5rem;
 }
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
 }
 
@@ -127,11 +132,11 @@ header nav ul li a:hover {
 
 .project h3 {
     margin: 0.5rem 0;
-    color: #333;
+    color: #343a40;
 }
 
 .project a {
     text-decoration: none;
-    color: #4CAF50;
+    color: #6c757d;
     font-weight: bold;
 }
