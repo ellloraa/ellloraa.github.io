@@ -64,9 +64,8 @@ header nav ul li a:hover {
 }
 
 .profile-container img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 200px;
+    height: auto;
     margin-bottom: 1rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -118,6 +117,10 @@ header nav ul li a:hover {
     gap: 1.5rem;
 }
 
+.project a {
+    text-decoration: none;
+}
+
 .project img {
     width: 100%;
     border-radius: 8px;
@@ -133,10 +136,5 @@ header nav ul li a:hover {
 .project h3 {
     margin: 0.5rem 0;
     color: #343a40;
-}
-
-.project a {
-    text-decoration: none;
-    color: #6c757d;
-    font-weight: bold;
+    text-align: center;
 }
