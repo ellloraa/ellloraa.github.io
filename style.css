@@ -55,10 +55,10 @@ header nav ul li a:hover {
     flex-direction: row;
     align-items: center;
     padding: 4rem 2rem;
-    background-image: url('assets/images/girls.jpg'); /* Replace with the path to your image */
-    background-size: cover; /* Ensures the image covers the entire hero section */
-    background-position: center; /* Centers the image within the hero section */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-image: url('assets/images/girls.jpg'); /* Verify path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .profile-container {
