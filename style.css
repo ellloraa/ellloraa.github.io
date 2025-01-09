@@ -1,20 +1,130 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
-    background-color: #f4f4f9;
-    color: #333;
+    scroll-behavior: smooth;
 }
 
 header {
-    padding: 2rem;
-    background-color: #4CAF50;
-    color: white;
-}
-
-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem;
-    margin: 1rem auto;
+    background-color: #333;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
+header .profile {
+    display: flex;
+    align-items: center;
+}
+
+header .profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav .menu-toggle {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul.hidden {
+    display: none;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 3rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+#hero .links a {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#projects {
+    padding: 2rem;
+    background: #f4f4f9;
+    text-align: center;
+}
+
+#projects h2 {
+    margin-bottom: 2rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.project {
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.project a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
