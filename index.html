@@ -4,7 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ellora Devulapally Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: linear-gradient(120deg, #f0f8ff, #e6e6fa);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            border-bottom: 2px solid #d4d4d4;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 a {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.5rem;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin: 0 1rem;
+        }
+
+        header nav ul li a {
+            color: #6c757d;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        header nav ul li a:hover {
+            color: #4CAF50;
+        }
+
+        /* Hero Section */
+        #hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 2rem;
+            background-color: #f0f8ff;
+        }
+
+        .profile-container img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 1rem;
+            border: 3px solid #4CAF50;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-content h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .hero-content .bio {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-bottom: 1.5rem;
+        }
+
+        .buttons .button {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            text-decoration: none;
+            color: white;
+            background-color: #4CAF50;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .buttons .button:hover {
+            background-color: #388e3c;
+            transform: translateY(-2px);
+        }
+
+        /* Projects Section */
+        #projects {
+            padding: 2rem;
+            background-color: #f9f9f9;
+        }
+
+        #projects h2 {
+            font-size: 2rem;
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .project img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .project h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin: 0.5rem 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.8rem;
+            background: #e6e6fa;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -53,5 +209,9 @@
             </div>
         </div>
     </section>
+
+    <footer>
+        &copy; 2025 Ellora Devulapally. All rights reserved.
+    </footer>
 </body>
 </html>
