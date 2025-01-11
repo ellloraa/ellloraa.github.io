@@ -124,8 +124,8 @@ p {
 }
 
 #about img {
-    width: 100px; /* Adjust width as needed */
-    height: 100px; /* Ensure height matches width */
+    width: 50px; /* Adjust width as needed */
+    height: 50px; /* Ensure height matches width */
     object-fit: cover; /* Ensure the image scales properly */
     border: 2px solid var(--accent-color); /* Optional border */
 }
