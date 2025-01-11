@@ -304,42 +304,91 @@ footer .social a:hover svg {
 
 /* PORTFOLIO STUFF */
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: #ffffff;
+    color: #080000;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #f8f8f8;
+    border-bottom: 1px solid #ccc;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #080000;
+}
+
 #portfolio-gallery {
-    margin-top: var(--space-xxl);
-    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller item sizes */
-    gap: var(--space-md); /* Adjust gap between items */
-    margin: var(--space-lg) auto;
-    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
 }
 
 .gallery-item {
     position: relative;
+    cursor: pointer;
+    border-radius: 8px;
     overflow: hidden;
-    border-radius: 8px; /* Optional: Adjust rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-item:hover {
-    transform: scale(1.03); /* Subtle hover effect */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.gallery img {
+.gallery-item img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
     object-fit: cover;
-    aspect-ratio: 1 / 1; /* Ensures images are square */
 }
 
-.gallery-item p {
-    margin: var(--space-xs) 0; /* Adjust spacing for smaller items */
-    font-size: var(--font-size-xs); /* Smaller font size for captions */
-    color: var(--text-color-muted);
-    text-align: center; /* Center align text under images */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+.lightbox p {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    max-width: 600px;
 }
