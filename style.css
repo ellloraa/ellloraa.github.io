@@ -115,7 +115,7 @@ p {
 #about {
     margin-top: var(--space-xxl);
     display: inline-block; /* Align items horizontally */
-    align-items: flex-start; /* Center align vertically */
+    /* align-items: flex-start; Center align vertically */
     gap: var(--space-xs); /* Space between name and image */
     flex-wrap: wrap;
 }
