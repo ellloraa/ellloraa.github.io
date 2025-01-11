@@ -2,26 +2,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelectorAll("nav ul li a");
 
     navLinks.forEach((link) => {
-        link.onclick = (e) => {
-            if (link.target === "_blank" || link.href.startsWith("http")) {
-                return; // Allow default behavior for external links
+        link.addEventListener("click", (e) => {
+            const href = link.getAttribute("href");
+
+            // Skip external or blank links
+            if (link.target === "_blank" || href.startsWith("http")) {
+                return;
             }
 
             e.preventDefault();
 
-            const targetSelector = e.target.getAttribute("href");
-            const target = document.querySelector(targetSelector);
-
+            // Ensure the target selector is valid
+            const target = document.querySelector(href);
             if (target) {
                 target.scrollIntoView({
                     behavior: "smooth",
                 });
             } else {
-                console.warn(`No target found for selector: ${targetSelector}`);
+                console.warn(`No target found for selector: ${href}`);
             }
-        };
+        });
     });
 });
+
 
 // Lazy loading for gallery images
 document.addEventListener("DOMContentLoaded", () => {
