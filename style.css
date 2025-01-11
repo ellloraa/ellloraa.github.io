@@ -90,14 +90,19 @@ a:visited {
 h1 {
     font-size: var(--font-size-xxl);
     margin-bottom: var(--space-sm);
+    text-align: center; /* Center-align the main headings */
+    color: var(--text-color);
+    font-weight: 700; /* Bold for emphasis */
+    line-height: 1.2;
 }
 
 h2 {
     font-size: var(--font-size-xl);
     color: var(--accent-color);
     margin-bottom: var(--space-lg);
-    font-weight: 200;
+    font-weight: 200; /* Light for subheadings */
     margin-top: var(--space-xl);
+    text-align: center; /* Center-align subheadings as well */
 }
 
 h3 {
@@ -339,6 +344,11 @@ nav ul li a {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
+}
+
+#portfolio-gallery h1 {
+    font-size: var(--font-size-xxl);
+    color: var(--accent-color); /* Use the accent color for variety */
 }
 
 .gallery {
