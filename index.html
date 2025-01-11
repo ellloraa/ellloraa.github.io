@@ -11,7 +11,7 @@
 
         /* VARIABLES */
         :root {
-            --accent-color: #89c078;
+            --accent-color: #c75de7;
             --background-color: #ffffff;
             --text-color: #080000;
             --text-color-muted: #b9b9b9;
@@ -141,14 +141,21 @@
         }
 
         .card {
-            background: linear-gradient(90deg, #e6e6e8 0%, #999899 50%, #3d3b3e 50%);
+            background: linear-gradient(90deg, #35353f 0%, #3d3b3e 50%, #3d3b3e 50%);
             border-radius: 20px;
             padding: var(--space-xs) var(--space-lg) var(--space-lg);
             border: 0.5px solid #484851;
             margin-bottom: var(--space-lg);
+            color: white; /* Text inside cards is now white */
+}
+
+        .card h3 {
+            color: white; /* Ensure card titles are white */
+            margin-bottom: var(--space-sm);
         }
 
         .card p {
+            color: white; /* Ensure card paragraphs are white */
             margin: var(--space-xs) 0;
             font-size: var(--font-size-xs);
         }
@@ -537,13 +544,6 @@
                     </svg>
                 </a>
             </div>
-            <p>
-                &copy; 2024 Josh Miles. All rights reserved.
-            </p>
-            <p>
-                <a href="https://github.com/ayushsaranGithuB/one-page-portfolios/tree/main">Get this Free! One-Page
-                    Portfolio Template</a>
-            </p>
         </footer>
     </div>
     <script>
