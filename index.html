@@ -169,20 +169,25 @@
         </main>
     </div>
     <script>
-        // Catch all the # links from the nav and make them scroll smoothly to their destinations
         const navLinks = document.querySelectorAll("nav ul li a");
 
-        // loop through the links and set an onclick event to send the user to the correct section in a smooth scroll
-        navLinks.forEach((link) => {
-            link.onclick = (e) => {
-                e.preventDefault();
-                const target = document.querySelector(e.target.getAttribute("href"));
-                target.scrollIntoView({
-                    behavior: "smooth",
-                });
-                return false;
-            };
-        });
+    navLinks.forEach((link) => {
+    link.onclick = (e) => {
+        // Exclude links that point to external resources
+        if (link.target === "_blank" || link.href.startsWith("http")) {
+            return; // Allow default behavior for external links
+        }
+
+        // Smooth scrolling for internal links
+        e.preventDefault();
+        const target = document.querySelector(e.target.getAttribute("href"));
+        if (target) {
+            target.scrollIntoView({
+                behavior: "smooth",
+            });
+        }
+    };
+});
     </script>
 </body>
 
