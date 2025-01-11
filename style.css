@@ -115,26 +115,31 @@ p {
 #about {
     margin-top: var(--space-xxl);
     display: flex; /* Align items horizontally */
-    align-items: center; /* Center align vertically */
+    align-items: flex-start; /* Center align vertically */
     gap: var(--space-md); /* Space between name and image */
+    flex-wrap: wrap;
 }
 
 #about h1 {
     font-size: var(--font-size-xxl);
     margin: 0; /* Remove margin for proper alignment */
+    flex: 1;
 }
 
 #about img {
     width: 150px; /* Adjust width as needed */
     height: 150px; /* Ensure height matches width */
     object-fit: cover; /* Ensure the image scales properly */
+    flex-shrink: 0;
 }
 
 #about p {
+    margin-top: var(--space-md);
     font-size: var(--font-size-xl);
     font-weight: 200;
     line-height: 1.4;
     color: var(--text-color);
+    width: 100%;
 }
 
 section {
