@@ -113,11 +113,21 @@ p {
 
 #about {
     margin-top: var(--space-xxl);
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center align vertically */
+    gap: var(--space-md); /* Space between name and image */
 }
 
 #about h1 {
     font-size: var(--font-size-xxl);
-    margin-bottom: var(--space-sm);
+    margin: 0; /* Remove margin for proper alignment */
+}
+
+#about img {
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Ensure height matches width */
+    object-fit: cover; /* Ensure the image scales properly */
+    border: 2px solid var(--accent-color); /* Optional border */
 }
 
 #about p {
