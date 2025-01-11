@@ -51,6 +51,12 @@
 
         /* LOGO AND NAVIGATION */
 
+        .logo img.profile-logo {
+        width: 80px; /* Adjust this to make the logo larger or smaller */
+        height: 80px; /* Ensures the image remains square */
+        object-fit: cover; /* Ensures the image is centered and cropped if necessary */
+    }
+
         header {
             display: flex;
             align-items: center;
@@ -62,11 +68,6 @@
             margin-left: auto;
         }
 
-        .logo {
-            font-size: var(--font-size-lg);
-            font-weight: 700;
-
-        }
 
         nav ul {
             display: flex;
@@ -297,7 +298,9 @@
 
         <header>
             <div class="logo">
-                <a href="/">JM.</a>
+                <a href="/">
+                    <img src="assets/images/profile.jpg" alt="Profile Picture" class="profile-logo">
+                    </a>
             </div>
             <nav>
                 <ul>
