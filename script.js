@@ -3,18 +3,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     navLinks.forEach((link) => {
         link.onclick = (e) => {
-            // Exclude links that point to external resources
             if (link.target === "_blank" || link.href.startsWith("http")) {
                 return; // Allow default behavior for external links
             }
 
-            // Smooth scrolling for internal links
             e.preventDefault();
-            const target = document.querySelector(e.target.getAttribute("href"));
+
+            const targetSelector = e.target.getAttribute("href");
+            const target = document.querySelector(targetSelector);
+
             if (target) {
                 target.scrollIntoView({
                     behavior: "smooth",
                 });
+            } else {
+                console.warn(`No target found for selector: ${targetSelector}`);
             }
         };
     });
