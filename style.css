@@ -53,6 +53,8 @@ header {
     align-items: center;
     padding: 20px 0;
     font-weight: 600;
+    background-color: var(--background-color); /* Match the background color */
+    border-bottom: 1px solid #ccc; /* Optional border for separation */
 }
 
 nav {
@@ -63,14 +65,16 @@ nav {
 .logo {
     font-size: var(--font-size-lg);
     font-weight: 700;
-
+    color: var(--text-color); /* Use text color for consistency */
 }
+
 
 nav ul {
     display: flex;
     gap: 40px;
     list-style: none;
     margin: 0;
+    padding: 0;
 }
 
 nav ul li a:link,
@@ -81,10 +85,16 @@ nav ul li a:visited {
 
 /* TYPOGRAPHY */
 
-a:link,
-a:visited {
-    color: var(--accent-color);
-    text-decoration: none;
+nav ul li a:link,
+nav ul li a:visited {
+    color: var(--text-color); /* Maintain text color */
+    opacity: 0.7; /* Subtle opacity for links */
+    text-decoration: none; /* Remove underline */
+    transition: opacity 0.3s ease; /* Smooth hover effect */
+}
+
+nav ul li a:hover {
+    opacity: 1; /* Fully visible on hover */
 }
 
 h1 {
