@@ -22,3 +22,22 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     });
 });
+
+// Lazy loading for gallery images
+document.addEventListener("DOMContentLoaded", () => {
+    const images = document.querySelectorAll(".gallery img");
+    images.forEach((img) => {
+        img.loading = "lazy";
+    });
+});
+
+// Lightbox effect (basic example)
+document.querySelectorAll(".gallery-item img").forEach((img) => {
+    img.addEventListener("click", (e) => {
+        const modal = document.createElement("div");
+        modal.className = "lightbox";
+        modal.innerHTML = `<img src="${e.target.src}" alt="${e.target.alt}">`;
+        modal.onclick = () => modal.remove();
+        document.body.appendChild(modal);
+    });
+});

@@ -296,3 +296,41 @@ footer .social a:hover svg {
         grid-template-columns: 1fr;
     }
 }
+
+#portfolio-gallery {
+    margin-top: var(--space-xxl);
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    margin: var(--space-lg) auto;
+    max-width: 1200px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.gallery-item p {
+    margin: var(--space-sm) 0;
+    font-size: var(--font-size-sm);
+    color: var(--text-color-muted);
+}
