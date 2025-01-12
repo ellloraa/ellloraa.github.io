@@ -192,8 +192,8 @@ section {
 }
 
 .project p a {
-    display: block;
-    margin-top: var(--space-md);
+    display: inline; /* Allows links to appear inline with text */
+    margin-top: 0; /* Removes unnecessary margin for inline links */
 }
 
 /* CONTACT */
