@@ -108,33 +108,35 @@ p {
 /* SECTIONS */
 #about {
     margin-top: var(--space-xxl);
-    display: inline-block; /* Align items horizontally */
-    /* align-items: flex-start; Center align vertically */
-    gap: var(--space-xs); /* Space between name and image */
-    flex-wrap: wrap;
 }
 
-#about h1 {
+.about-header {
+    display: flex;
+    align-items: center; /* Aligns the name and profile picture vertically */
+    gap: var(--space-md); /* Adds spacing between name and profile picture */
+}
+
+.about-header h1 {
+    flex: 1; /* Makes the name take up the remaining space */
+    margin: 0; /* Removes default margin */
     font-size: var(--font-size-xxl);
-    margin: 0; /* Remove margin for proper alignment */
-    flex: 1;
+    line-height: 1.2;
 }
 
-#about img {
-    width: 200px; /* Adjust width as needed */
-    height: 200px; /* Ensure height matches width */
-    object-fit: cover; /* Ensure the image scales properly */
-    flex-shrink: 0;
+.profile-picture {
+    width: 120px; /* Adjust the size of the profile picture */
+    height: 120px; /* Ensure it’s a perfect square */
+    object-fit: cover; /* Keeps the image aspect ratio intact */
+    border-radius: 8px; /* Optional: slightly rounded corners */
 }
 
 #about p {
     margin-top: var(--space-md);
-    font-size: var(--font-size-xl);
-    font-weight: 200;
-    line-height: 1.4;
-    color: var(--text-color);
-    width: 100%;
+    font-size: var(--font-size-md);
+    line-height: 1.6;
+    color: var(--text-color-muted);
 }
+
 
 
 section {
