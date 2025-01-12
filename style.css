@@ -138,8 +138,6 @@ p {
     color: var(--text-color-muted);
 }
 
-
-
 section {
     margin-top: var(--space-xxl);
     margin-bottom: var(--space-xxl);
@@ -276,8 +274,9 @@ footer .social a:hover svg {
     .profile-picture {
         width: 100px; /* Smaller profile picture */
         height: 100px; /* Match width */
-        margin-left: 0; /* Remove unnecessary left margin */
+        margin-right: 5px; /* Remove unnecessary left margin */
         margin-top: var(--space-sm); /* Add top margin for spacing */
+        margin-bottom: 5px;
     }
 
     section {
