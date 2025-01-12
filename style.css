@@ -200,7 +200,12 @@ section {
     text-align: center;
 }
 
+#contact h2 {
+    margin-bottom: 0;
+}
+
 #contact p {
+    margin-top: 0;
     font-size: var(--font-size-lg);
     font-weight: 200;
     line-height: 1.4;
