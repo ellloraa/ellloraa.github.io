@@ -6,7 +6,7 @@
     --accent-color: #bd50cb;
     --background-color: #ffffff;
     --text-color: #080000;
-    --text-color-muted: #b9b9b9;
+    --text-color-muted: #858585;
 
     /* Spacing */
     --space-xs: 4px;
@@ -239,7 +239,7 @@ footer .social a:hover svg {
         --accent-color: #bd50cb; /* Match desktop accent color */
         --background-color: #ffffff; /* Match desktop background color */
         --text-color: #080000; /* Match desktop text color */
-        --text-color-muted: #b9b9b9; /* Match desktop muted text color */
+        --text-color-muted: #858585; /* Match desktop muted text color */
 
         /* Spacing */
         --space-xs: 4px;
