@@ -1,19 +1,14 @@
-/* Inter Font from Goole Fonts */
+/* Import Inter Font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-html, body {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth; /* Ensure smooth scrolling */
-}
 /* VARIABLES */
 :root {
-    --accent-color: #c74bec;
+    --accent-color: #8f4499;
     --background-color: #ffffff;
     --text-color: #080000;
     --text-color-muted: #b9b9b9;
 
-    /* spacing */
+    /* Spacing */
     --space-xs: 4px;
     --space-sm: 8px;
     --space-md: 16px;
@@ -21,7 +16,7 @@ html, body {
     --space-xl: 64px;
     --space-xxl: 128px;
 
-    /* typography */
+    /* Typography */
     --font-size-xs: 14px;
     --font-size-sm: 16px;
     --font-size-md: 18px;
@@ -30,9 +25,10 @@ html, body {
     --font-size-xxl: 88px;
 }
 
+/* GENERAL STYLING */
 body {
     background-color: var(--background-color);
-    font-family: Inter, Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     margin: 0;
     padding: 0 20px;
     color: var(--text-color);
@@ -46,35 +42,27 @@ body {
     padding-top: var(--space-md);
 }
 
-/* LOGO AND NAVIGATION */
-
+/* HEADER */
 header {
     display: flex;
     align-items: center;
     padding: 20px 0;
-    font-weight: 600;
-    background-color: var(--background-color); /* Match the background color */
-    border-bottom: 1px solid #ccc; /* Optional border for separation */
 }
 
 nav {
-
     margin-left: auto;
 }
 
 .logo {
     font-size: var(--font-size-lg);
     font-weight: 700;
-    color: var(--text-color); /* Use text color for consistency */
 }
-
 
 nav ul {
     display: flex;
     gap: 40px;
     list-style: none;
     margin: 0;
-    padding: 0;
 }
 
 nav ul li a:link,
@@ -84,35 +72,23 @@ nav ul li a:visited {
 }
 
 /* TYPOGRAPHY */
-
-nav ul li a:link,
-nav ul li a:visited {
-    color: var(--text-color); /* Maintain text color */
-    opacity: 0.7; /* Subtle opacity for links */
-    text-decoration: none; /* Remove underline */
-    transition: opacity 0.3s ease; /* Smooth hover effect */
-}
-
-nav ul li a:hover {
-    opacity: 1; /* Fully visible on hover */
+a:link,
+a:visited {
+    color: var(--accent-color);
+    text-decoration: none;
 }
 
 h1 {
     font-size: var(--font-size-xxl);
     margin-bottom: var(--space-sm);
-    text-align: center; /* Center-align the main headings */
-    color: var(--text-color);
-    font-weight: 700; /* Bold for emphasis */
-    line-height: 1.2;
 }
 
 h2 {
     font-size: var(--font-size-xl);
     color: var(--accent-color);
     margin-bottom: var(--space-lg);
-    font-weight: 200; /* Light for subheadings */
+    font-weight: 200;
     margin-top: var(--space-xl);
-    text-align: center; /* Center-align subheadings as well */
 }
 
 h3 {
@@ -127,39 +103,23 @@ p {
     line-height: 1.6;
     color: var(--text-color-muted);
     margin-bottom: var(--space-md);
-
 }
 
-/* SECTIONS  */
-
+/* SECTIONS */
 #about {
     margin-top: var(--space-xxl);
-    display: inline-block; /* Align items horizontally */
-    /* align-items: flex-start; Center align vertically */
-    gap: var(--space-xs); /* Space between name and image */
-    flex-wrap: wrap;
 }
 
 #about h1 {
     font-size: var(--font-size-xxl);
-    margin: 0; /* Remove margin for proper alignment */
-    flex: 1;
-}
-
-#about img {
-    width: 200px; /* Adjust width as needed */
-    height: 200px; /* Ensure height matches width */
-    object-fit: cover; /* Ensure the image scales properly */
-    flex-shrink: 0;
+    margin-bottom: var(--space-sm);
 }
 
 #about p {
-    margin-top: var(--space-md);
     font-size: var(--font-size-xl);
     font-weight: 200;
     line-height: 1.4;
     color: var(--text-color);
-    width: 100%;
 }
 
 section {
@@ -168,39 +128,29 @@ section {
 }
 
 .card {
-    background: linear-gradient(90deg, #35353f 0%, #3d3b3e 50%, #3d3b3e 50%);
+    background: linear-gradient(90deg, #e6e6e8 0%, #999899 50%, #3d3b3e 50%);
     border-radius: 20px;
     padding: var(--space-xs) var(--space-lg) var(--space-lg);
     border: 0.5px solid #484851;
     margin-bottom: var(--space-lg);
-    color: white; /* Text inside cards is now white */
-}
-
-.card h3 {
-    color: white; /* Ensure card titles are white */
-    margin-bottom: var(--space-sm);
 }
 
 .card p {
-    color: white; /* Ensure card paragraphs are white */
     margin: var(--space-xs) 0;
     font-size: var(--font-size-xs);
 }
 
 /* SKILLS */
-
 #skills p {
     line-height: 1.8;
 }
 
 /* EXPERIENCE */
-
 #experience .job p.role {
     font-size: var(--font-size-md);
 }
 
 /* RECENT WORK */
-
 .project {
     display: grid;
     grid-template-columns: 2fr 3fr;
@@ -224,8 +174,7 @@ section {
     margin-top: var(--space-md);
 }
 
-/* CONTACT  */
-
+/* CONTACT */
 #contact {
     text-align: center;
 }
@@ -237,9 +186,7 @@ section {
     color: var(--text-color);
 }
 
-
 /* FOOTER */
-
 footer {
     margin-top: var(--space-xl);
     padding: 0 0 var(--space-lg);
@@ -259,9 +206,7 @@ footer .social a:hover svg {
     fill: var(--accent-color);
 }
 
-
 /* MEDIA QUERIES */
-
 @media screen and (max-width: 600px) {
     :root {
         --primary-color: #f9a826;
@@ -271,7 +216,7 @@ footer .social a:hover svg {
         --text-color: #fff;
         --text-color-muted: #b9b9b9;
 
-        /* spacing */
+        /* Spacing */
         --space-xs: 4px;
         --space-sm: 8px;
         --space-md: 16px;
@@ -279,7 +224,7 @@ footer .social a:hover svg {
         --space-xl: 64px;
         --space-xxl: 128px;
 
-        /* typography */
+        /* Typography */
         --font-size-xs: 14px;
         --font-size-sm: 16px;
         --font-size-md: 18px;
@@ -315,39 +260,6 @@ footer .social a:hover svg {
     .project {
         grid-template-columns: 1fr;
     }
-}
-
-/* PORTFOLIO STUFF */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    background-color: #ffffff;
-    color: #080000;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: #f8f8f8;
-    border-bottom: 1px solid #ccc;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #080000;
 }
 
 #portfolio-gallery {
