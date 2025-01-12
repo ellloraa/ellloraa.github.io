@@ -6,7 +6,7 @@
     --accent-color: #bd50cb;
     --background-color: #ffffff;
     --text-color: #080000;
-    --text-color-muted: #9c9c9c;
+    --text-color-muted: #b9b9b9;
 
     /* Spacing */
     --space-xs: 4px;
@@ -112,7 +112,7 @@ p {
 
 .about-header {
     display: flex;
-    align-items: center; /* Aligns the name and profile picture vertically */
+    align-items: center; /* Aligns name and profile picture vertically */
     gap: var(--space-md); /* Adds spacing between name and profile picture */
 }
 
@@ -124,10 +124,11 @@ p {
 }
 
 .profile-picture {
-    width: 120px; /* Adjust the size of the profile picture */
-    height: 120px; /* Ensure it’s a perfect square */
+    width: 140px; /* Adjusted size for larger profile picture */
+    height: 140px; /* Ensure it’s a perfect square */
     object-fit: cover; /* Keeps the image aspect ratio intact */
-    border-radius: 8px; /* Optional: slightly rounded corners */
+    border-radius: 8px; /* Slightly rounded corners */
+    margin-left: 16px; /* Moves it closer to the right */
 }
 
 #about p {
@@ -235,12 +236,10 @@ footer .social a:hover svg {
 /* MEDIA QUERIES */
 @media screen and (max-width: 600px) {
     :root {
-        --primary-color: #f9a826;
-        --secondary-color: #f9a826;
-        --accent-color: #47ebeb;
-        --background-color: #2a2a31;
-        --text-color: #fff;
-        --text-color-muted: #b9b9b9;
+        --accent-color: #bd50cb; /* Match desktop accent color */
+        --background-color: #ffffff; /* Match desktop background color */
+        --text-color: #080000; /* Match desktop text color */
+        --text-color-muted: #b9b9b9; /* Match desktop muted text color */
 
         /* Spacing */
         --space-xs: 4px;
@@ -287,6 +286,7 @@ footer .social a:hover svg {
         grid-template-columns: 1fr;
     }
 }
+
 
 #portfolio-gallery {
     max-width: 1200px;
