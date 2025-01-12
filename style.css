@@ -145,16 +145,20 @@ section {
 }
 
 .card {
-    background: #6f6c70;
+    background: #f4f4f9; /* Light neutral background */
     border-radius: 20px;
     padding: var(--space-xs) var(--space-lg) var(--space-lg);
-    border: 0.5px solid #484851;
+    border: 1px solid #ddd; /* Soft border for subtle separation */
     margin-bottom: var(--space-lg);
+    color: var(--text-color); /* Ensures good contrast with the light background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a soft shadow for depth */
 }
+
 
 .card p {
     margin: var(--space-xs) 0;
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm); /* Slightly larger for readability */
+    line-height: 1.6; /* Improves text readability */
 }
 
 /* SKILLS */
