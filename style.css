@@ -236,10 +236,10 @@ footer .social a:hover svg {
 /* MEDIA QUERIES */
 @media screen and (max-width: 600px) {
     :root {
-        --accent-color: #bd50cb; /* Match desktop accent color */
-        --background-color: #ffffff; /* Match desktop background color */
-        --text-color: #080000; /* Match desktop text color */
-        --text-color-muted: #858585; /* Match desktop muted text color */
+        --accent-color: #bd50cb;
+        --background-color: #ffffff;
+        --text-color: #080000;
+        --text-color-muted: #858585;
 
         /* Spacing */
         --space-xs: 4px;
@@ -271,6 +271,15 @@ footer .social a:hover svg {
         gap: 14px;
         list-style: none;
         align-items: flex-end;
+    }
+
+   
+
+    .profile-picture {
+        width: 100px; /* Smaller profile picture */
+        height: 100px; /* Match width */
+        margin-left: 0; /* Remove unnecessary left margin */
+        margin-top: var(--space-sm); /* Add top margin for spacing */
     }
 
     section {
