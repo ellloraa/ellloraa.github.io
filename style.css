@@ -24,7 +24,54 @@
     --font-size-xl: 28px;
     --font-size-xxl: 88px;
 }
+/* Dropdown setup */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+/* Dropdown content - hidden by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style dropdown links */
+.dropdown-content li {
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-content li a {
+    padding: 10px 15px;
+    color: #333;
+    white-space: nowrap;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f0f0f0;
+}
 /* GENERAL STYLING */
 body {
     background-color: var(--background-color);
