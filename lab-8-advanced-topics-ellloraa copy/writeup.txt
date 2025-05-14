@@ -1,0 +1,19 @@
+Include your web screenshot and mobile screenshot of your responsive scatterplot visualization.
+Uploaded as screenshot-web.png and screenshot-mobile.png in the GitHub Classroom repo.
+
+How long did this take (estimate)?
+Around 3–4 hours total.
+
+What were the enjoyable aspects of the lab?
+Seeing the visualizations actually respond to window resizing was really satisfying. The annotations were also cool to experiment with.
+
+What were the challenging parts of this lab?
+Had issues with the scatterplot Y-axis getting cut off — it was a sizing issue I didn’t catch right away. The annotations in the line chart were tricky; some didn’t render because of wrong positioning or missing coordinates.
+Also, my annotation vis doesn't look quite right - I'm having trouble adding the extra annotations.
+Also, having trouble with the overall html.
+
+What resources did you use?
+
+D3.js documentation: https://d3js.org/
+
+D3-annotation examples: https://d3-annotation.susielu.com
