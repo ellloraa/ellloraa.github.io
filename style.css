@@ -401,3 +401,8 @@ footer .social a:hover svg {
     margin-top: 20px;
     max-width: 600px;
 }
+/* Tabs spacing fixes */
+.tabs .tabpanel { padding-top: 8px; }
+.tabs .tabpanel > section { margin-top: 0; }  /* kill the global section margin inside tabs */
+.tabs .tabpanel h1 { margin-top: 0; }         /* remove default h1 top margin */
+#portfolio-gallery { padding-top: 16px; }     /* or 0 if you want it tight */
