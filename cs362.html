@@ -1,53 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSC 362 - Data Visualization</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* --- Minimal tab styling (safe to move to style.css) --- */
+    .tabs {
+      margin-top: 1rem;
+    }
+    .tablist {
+      display: flex;
+      gap: .5rem;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .tablist .tab {
+      appearance: none;
+      background: none;
+      border: 0;
+      padding: .75rem 1rem;
+      font: inherit;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+    }
+    .tab[aria-selected="true"] {
+      border-color: currentColor;
+      font-weight: 600;
+    }
+    .tabpanel { padding-top: 1rem; }
+    /* hide elements that have the [hidden] attribute */
+    [hidden] { display: none !important; }
+      /* Fix the big gap: browsers add large default top margins to headings */
+    .tabs .tabpanel h1 { margin-top: 0; }
+    /* Reduce panel padding a touch */
+    .tabpanel { padding-top: .5rem; }
+    /* If you have a fixed/sticky header, keep anchors from hiding under it */
+    #portfolio-gallery, #video-projects { scroll-margin-top: 96px; }
+  </style>
 </head>
-
 <body>
-    <div id="page">
-        <header>
-            <div class="logo">
-                <a href="/">ETD</a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="https://ellloraa.github.io/portfolio.html">Art Portfolio</a></li>
-                    <ul>
-                        <li class="dropdown">
-                            <a href="#">Coursework</a>
-                            <ul class="dropdown-content">
-                                <li><a href="https://ellloraa.github.io/cs362.html">CSC 362</a></li>
-                                <li><a href="https://ellloraa.github.io/cs371.html">CSC 371</a></li>
-                            </ul>
-                    <li><a href="https://art111.elloraworld.dcreate.domains/page/2/" target="_blank">Digital Art Blog</a></li>
-               
-                        <li><a href="assets/main page/Ellora Devulapally Resume 2025.pdf" target="_blank">Resume</a></li>
-                        <li><a href="https://ellloraa.github.io/index.html#projects">Projects</a></li>
-                        <li><a href="https://ellloraa.github.io/index.html#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main>
-            <h1>CSC 362: Data Visualization</h1>
-            <p>This page includes lab projects from my Computer Science 362 class, in which we explored data visualization through D3.js and interactive web development.</p>
-            <p>
-                For our final project, my lab partner and I built a visualization in D3 using data from Yale's Project on Climate Change that allows a user to visualize how opinions about climate change in America have changed over the past decade and a half. Click <a href="./Final-Project-CSC361 copy/index.html" target="_blank">here</a> to see the visualization and <a href="./assets/Ellora's Copy of Final Project - Write Up.pdf" target="_blank">here</a> to read our writeup on the work we did.
-            </p>
-            <p>Other Lab Projects:</p>
-            <ul>
-                <li><a href="trails-skeleton/index.html" target="_blank">Lab 7 - Linked Bar Chart and Scatterplot</a></li>
-                <li><a href="stock-skeleton/index.html" target="_blank">Stock Lab</a></li>
-                <li><a href="stream-stacks/index.html" target="_blank">Stream Stacks Lab</a></li>
-                <li><a href="./lab-8-advanced-topics-ellloraa copy/index.html" target="_blank">Lab 8</a></li>
-            </ul>
-        </main>
+  <header>
+    <div class="logo">
+      <a href="/">ETD</a>
     </div>
-</body>
+    <nav>
+      <ul>
+        <li><a href="https://ellloraa.github.io/portfolio.html">Art Portfolio</a></li>
+        <ul>
+          <li class="dropdown">
+            <a href="#">Coursework</a>
+            <ul class="dropdown-content">
+              <li><a href="https://ellloraa.github.io/cs362.html">CSC 362</a></li>
+              <li><a href="https://ellloraa.github.io/cs371.html">CSC 371</a></li>
+            </ul>
+          <li><a href="https://art111.elloraworld.dcreate.domains/page/2/" target="_blank">Digital Art Blog</a></li>
+          <li><a href="https://ellloraa.github.io/assets/main page/cv.pdf" target="_blank">Resume</a></li>
+          <li><a href="https://ellloraa.github.io/index.html#projects">Projects</a></li>
+          <li><a href="https://ellloraa.github.io/index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main>
+    <!-- Accessible Tabs -->
+    <div class="tabs" id="work-tabs">
+      <div class="tablist" role="tablist" aria-label="Work sections">
+        <button id="tab-art" class="tab" role="tab" aria-controls="panel-art" aria-selected="true">
+          Art
+        </button>
+        <button id="tab-video" class="tab" role="tab" aria-controls="panel-video" aria-selected="false">
+          Video & Performance
+        </button>
+      </div>
+
+      <!-- Panel: Art -->
+      <section id="panel-art" class="tabpanel" role="tabpanel" aria-labelledby="tab-art">
+        <section id="portfolio-gallery">
+          <h1>Art Portfolio</h1>
+          <div class="gallery">
+            <!-- Gallery items -->
+            <div class="gallery-item">
+              <img src="assets/portfolio/Screenshot 2025-09-27 at 2.58.51 PM.png" alt="Artwork" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/portfolio/unnamed-2.jpg" alt="Artwork" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/portfolio/unnamed.gif" alt="Artwork" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/portfolio/unnamed.jpg" alt="Artwork" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/portfolio/unnamed.png" alt="Artwork" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/main page/mockup.pdf" alt="Side B Design Issue 2" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/main page/side b  copy.jpg" alt="Side B Design Issue 1" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/portfolio/project 1/girls.jpg" alt="Self Portrait as Pattern" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/portfolio/project 1/smaller girls.png" alt="Self Portrait as Pattern" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/portfolio/project 2/project02-1.jpg" alt="Project 2: 14 Variations" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/portfolio/project 2/project02-2.jpg" alt="Project 2: 14 Variations" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/portfolio/project 2/project02-3.jpg" alt="Project 2: 14 Variations" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/portfolio/project 2/project02-4.jpg" alt="Project 2: 14 Variations" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/portfolio/project 2/project02-5.jpg" alt="Project 2: 14 Variations" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/portfolio/project 2/project02-6.jpg" alt="Project 2: 14 Variations" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/portfolio/project 2/project02-7.jpg" alt="Project 2: 14 Variations" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/portfolio/project 2/project02-8.jpg" alt="Project 2: 14 Variations" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/portfolio/project 2/project02-9.jpg" alt="Project 2: 14 Variations" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/portfolio/project 2/project02-10.jpg" alt="Project 2: 14 Variations" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/portfolio/project 2/project02-12.jpg" alt="Project 2: 14 Variations" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/portfolio/project 2/project02-13.jpg" alt="Project 2: 14 Variations" />
+            </div>
+            <div class="gallery-item">
+              <img src="assets/portfolio/project 2/project02-14.jpg" alt="Project 2: 14 Variations" />
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Panel: Video & Performance -->
+      <section id="panel-video" class="tabpanel" role="tabpanel" aria-labelledby="tab-video" hidden>
+        <section id="video-projects">
+          <h1>Video &amp; Performance Work</h1>
+          <div class="video-item">
+            <h2>Dance Performance: Bharatnatyam Arangetram</h2>
+            <p>Here is a short excerpt from my 2-hour long solo Bharatnatyam arangetram, a culmination of over a decade studying classical Indian dance.</p>
+            <div class="video-container">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/HlhERpnX8H8" title="Dance Performance by Ellora Devulapally" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="video-item">
+            <h2>Video Design Project</h2>
+            <p>A short video piece I designed blending motion, color, and sound to explore digital storytelling and experimental design.</p>
+            <div class="video-container">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/ajd0_g3__Fw" title="Video Design Project by Ellora Devulapally" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="video-item">
+            <h2>Human-Computer Interaction: Design for Another World</h2>
+            <p>A walk-through of a VR interactive site I built with classmates for my CSC-363 class exploring visual design and GUI practices.</p>
+            <div class="video-container">
+              <iframe width="560" height="315" src="https://youtube.com/embed/rXubpTQ75hE" title="Time Travel VR Experiements" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    // Accessible tabs with hash support and keyboard navigation
+    (function () {
+      const tablist = document.querySelector('#work-tabs .tablist');
+      const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
+      const panels = tabs.map((t) => document.getElementById(t.getAttribute('aria-controls')));
+
+      function selectTab(newTab) {
+        tabs.forEach((t, i) => {
+          const selected = t === newTab;
+          t.setAttribute('aria-selected', String(selected));
+          panels[i].hidden = !selected;
+        });
+        // update URL hash to the visible section id for deep-linking
+        const activePanelId = newTab.getAttribute('aria-controls');
+        const section = activePanelId === 'panel-art' ? 'portfolio-gallery' : 'video-projects';
+        if (history.replaceState) {
+          history.replaceState(null, '', '#' + section);
+        } else {
+          location.hash = section;
+        }
+      }
+
+      // click to switch
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => selectTab(tab));
+      });
+
+      // keyboard navigation: ArrowLeft/Right, Home/End
+      tablist.addEventListener('keydown', (e) => {
+        const i = tabs.findIndex((t) => t.getAttribute('aria-selected') === 'true');
+        if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          const next = tabs[(i + 1) % tabs.length];
+          next.focus();
+          selectTab(next);
+        } else if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          const prev = tabs[(i - 1 + tabs.length) % tabs.length];
+          prev.focus();
+          selectTab(prev);
+        } else if (e.key === 'Home') {
+          e.preventDefault();
+          tabs[0].focus();
+          selectTab(tabs[0]);
+        } else if (e.key === 'End') {
+          e.preventDefault();
+          tabs[tabs.length - 1].focus();
+          selectTab(tabs[tabs.length - 1]);
+        }
+      });
+
+      // open the correct tab if the page is visited with a hash
+      function openFromHash() {
+        const hash = (location.hash || '').replace('#', '');
+        if (hash === 'video-projects') selectTab(document.getElementById('tab-video'));
+        else if (hash === 'portfolio-gallery') selectTab(document.getElementById('tab-art'));
+      }
+      window.addEventListener('hashchange', openFromHash);
+      openFromHash();
+    })();
+  </script>
+</body>
 </html>
