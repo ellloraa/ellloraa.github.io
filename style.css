@@ -406,3 +406,16 @@ footer .social a:hover svg {
 .tabs .tabpanel > section { margin-top: 0; }  /* kill the global section margin inside tabs */
 .tabs .tabpanel h1 { margin-top: 0; }         /* remove default h1 top margin */
 #portfolio-gallery { padding-top: 16px; }     /* or 0 if you want it tight */
+/* Bigger, bolder tab labels */
+.tablist .tab {
+    font-size: clamp(18px, 2.2vw, 24px); /* scales nicely from ~18–24px */
+    font-weight: 600;
+    line-height: 1.2;
+    padding: 0.85rem 1.1rem;             /* keep the click target comfy */
+  }
+  
+  /* Optional: make the active one pop a bit more */
+  .tab[aria-selected="true"] {
+    border-bottom-width: 3px;
+  }
+  
