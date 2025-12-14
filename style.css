@@ -419,3 +419,38 @@ footer .social a:hover svg {
     border-bottom-width: 3px;
   }
   
+  /* FIGURES / IMAGES (make them smaller + adjustable) */
+figure {
+    margin: var(--space-md) 0;
+  }
+  
+  figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  /* Default: small-ish figures */
+  figure.small img {
+    width: min(320px, 100%);
+  }
+  
+  /* Even smaller option */
+  figure.tiny img {
+    width: min(220px, 100%);
+  }
+  
+  /* Medium option */
+  figure.medium img {
+    width: min(600px, 100%);
+  }
+  
+  /* Optional caption styling */
+  figcaption {
+    margin-top: var(--space-xs);
+    font-size: var(--font-size-xs);
+    color: var(--text-color-muted);
+    line-height: 1.4;
+  }
+  
